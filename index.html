@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Logger</title>
+  <meta name="description" content="Logger">
+  <meta name="author" content="Asapanna Rakesh(rakesh4real.github.io)">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href='css/normalize.css'>
+  <link rel="stylesheet" href='css/barebones.css'>
+  <link rel="stylesheet" href='css/skeleton-legacy.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href='css/custom.css'>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <script src="js/encr.js"></script>
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href='images/favicon-16.png'>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="righted width-90" style="margin-top: 2%;">
+    <span class="m-button" onclick="alert('Write HEADING and LOGS, enter password (use same password every-time. If you use different passwords, will be dispalyed separately) and save. You have to enter passwords to be able to click VIEW LOGS')">
+      Help
+    </span>
+    <span class="m-button" onclick="alert('Built by Asapanna Rakesh(rakesh4real.github.io)')">
+      Info
+    </span>
+    
+    <input id='del-id' type="password" placeholder="Paste Time Stamp To Delete" class="pass">
+    <span class="m-button" onclick="var delId = document.getElementById('del-id').value; operation(type='delData', dataList=null, delItemId=delId);">
+      Delete
+    </span>
+  </div>
+
+  <div class="width-70">
+    <div class="centered top-padding-3" style="color: black;">
+      <h2>
+        <i class="fa fa-moon-o"></i>
+        <i class="fa fa-pencil"></i>
+        <i class="fa fa-star-half-o"></i>
+      </h2>
+    </div>
+  </div>
+
+  <div class="width-70 centered">
+    <input id='head' class="log-head" type="text" placeholder="Heading">
+    <textarea id='log' class="log-text" name="Text1" placeholder="Logs"></textarea>
+
+    <div>
+      <input id='pw1' type="password" placeholder="Password" class="pass">
+      <input id='pw2' type="password" placeholder="Enter again" class="pass">  
+    </div>
+    
+    <span id='save-log' class="m-button" onclick="save()">
+      Save
+    </span>
+    <span class="m-button" onclick="viewLogs()">
+      View Logs
+    </span>
+  </div>
+
+  <div id='logs-container' class="display-logs-width-90">
+
+    <!-- horizontal card sample start -->
+    <!--
+    <div class="h-card">
+      <div class="h-card-head">
+        hi1
+      </div>
+      <div class="h-card-log">
+        hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2hi2
+      </div>
+    </div>
+    -->
+    <!-- horizontal card sample end -->
+
+  </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/indexedDB.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
